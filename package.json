@@ -1,0 +1,27 @@
+{
+  "name": "1.6-main",
+  "version": "1.0.0",
+  "main": "src/js/index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve",
+    "dev": "webpack --mode development",
+    "prod": "webpack --node-env=production",
+    "clear": "rd /s /q dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.2",
+    "mini-css-extract-plugin": "^2.9.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
