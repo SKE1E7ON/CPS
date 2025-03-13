@@ -144,7 +144,7 @@ header{
 
 .menu{
     
-    z-index: 3;
+    z-index: 10;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -158,6 +158,7 @@ header{
     transition: transform 0.5s ease;
 }
 .blur{
+    z-index: 1;
     display: none;
     top: 0px;
     left: 0px;
@@ -402,7 +403,6 @@ header{
 
 
 .slide_menu{
-    width: 100%;
     overflow: auto;
     padding-right: 16px;
     padding-left: 16px;
@@ -553,9 +553,8 @@ header{
 
 
 
-
-
 .label{
+    margin-bottom: 16px;
     margin-top: 10px;
     border-top: 1px solid #D9FFF5;
     display: flex;
@@ -573,7 +572,7 @@ header{
 .shadow{
     width: 100%;
     height: 90px;
-    z-index: 10;
+    z-index: 1;
     top: 90px;
     right: 0px;
     position: absolute;
@@ -584,13 +583,26 @@ header{
     width: 100%;
     height: 150px;
 }
+.swiper-2 {
+    display: none;
+    top: 0px;
+    width: 100%;
+    height: 150px;
+}
+
+.swiper-slide-active{
+    width: 50%;
+}
+
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
 }
 .staff_swiper-slide{
     text-align: center;
@@ -625,7 +637,7 @@ header{
 .title{
     padding: 0px 16px 0px 16px;
     top: 0px;
-    z-index: 100;
+    z-index: 1;
     position: fixed;
     width: 100%;
     min-height: 50px;
@@ -759,7 +771,7 @@ header{
 
 
 .services_tech button{
-    margin: 0px 10px 100px 0px;
+    margin: 0px 10px 0px 0px;
     padding: 10px 10px 10px 10px;
     display: flex;
     width: 240px;
@@ -787,10 +799,27 @@ margin-top: auto;
 }
 
 @media(max-width: 768px){
+    .footer_author{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_author_left{
+        margin-bottom: 10px;
+        margin-left: auto;
+
+    }
+    .footer_author_right{
+        margin-top: 10px;
+        margin-right: auto;
+
+    }
     .full_size{
         display: none;
     }
     .swiper{
+        display: block;
+    }
+    .swiper-2{
         display: block;
     }
     .label h3{
@@ -873,7 +902,7 @@ margin-top: auto;
     height: 350px;
 }
 .prise_pagination{
-    top: 250px;
+    top: 0px;
 }
 .prise_list button{
     padding: 16px 16px 16px 16px;
@@ -884,7 +913,7 @@ margin-top: auto;
     border-radius: 10px;
     border: 1px solid #eaeaea;
     background: white;
-    width: 260px;
+    min-width: 260px;
     height: 200px;
 }
 .prise_list_info{
@@ -1012,7 +1041,7 @@ footer h5{
 }
 footer span{
     display: block;
-    width: 500px;
+    max-width: 500px;
     margin-bottom: 16px;
 }
 .footer_link{
@@ -1045,7 +1074,7 @@ footer span{
 }
 
 .call_me{
-    z-index: 100;
+    z-index: 2;
     top: 0px;
     right: 0px;
     position: absolute;
@@ -1110,7 +1139,7 @@ footer span{
 }
 
 .call_back{
-    z-index: 100;
+    z-index: 2;
     top: 0px;
     right: 0px;
     position: absolute;

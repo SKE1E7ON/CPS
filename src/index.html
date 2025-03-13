@@ -22,7 +22,7 @@
 
 
             <div class="midle_nav">
-                <button>
+                <button id="back_call">
                     <img src="/src/img/call.png" alt="call">
                 </button>
                 <button>
@@ -41,23 +41,28 @@
                 <button id="me_call">
                     <img src="/src/img/repair.png" alt="settings">
                 </button>
-                <button id="back_call">
+                <button>
                     <img src="/src/img/status.png" alt="chekstatus">
                 </button>
             </div>
         </div>
     </header>
+
     <form id="call_back" class="call_back off">
+
         <button class="exid" id="exid">
             <img src="./img/close.png">
         </button>
+
         <div class="call_back_header">
             <hr>
             <h2>Заказать звонок</h2>
         </div>
+
         <div class="call_back_main">
             <input type="number" placeholder="Телефон">
         </div>
+
         <div class="call_back_footer">
             <span>
                 Нажимая “отправить”, вы даете согласие на <a>обработку персональных данных</a> и соглашаетесь с нашей <a>политикой конфиденциальности</a>
@@ -67,6 +72,7 @@
             </button>
         </div>
     </form>
+
     <form id="call_me" class="call_me off">
         <button class="exid" id="exid">
             <img src="./img/close.png">
@@ -90,6 +96,7 @@
             </button>
         </div>
     </form>
+    
     <form id="menu" class="menu hidden">
         <div class="header_menu_nav">
             <div class="menu_left_nav">
@@ -119,7 +126,9 @@
             </ul>
         </div>
         <div class="menu_footer">
-            <button title="Заказать звонок"><img src="img/call.png"></button>
+            <button id="back_calla">
+                <img src="/src/img/call.png" alt="call">
+            </button>
             <button title="Обратная связь"><img src="img/chat.png"></button>
             <button title="Профиль"><img src="img/profile.png"></button>
             <div class="menu-footer__contacts">
@@ -167,7 +176,9 @@
                     </ul>
                 </div>
                 <div class="menu_footer">
-                    <button title="Заказать звонок"><img src="img/call.png"></button>
+                    <button type="button" id="back_callb">
+                        <img src="/src/img/call.png" alt="call">
+                    </button>
                     <button title="Обратная связь"><img src="img/chat.png"></button>
                     <button title="Профиль"><img src="img/profile.png"></button>
                     <div class="menu-footer__contacts">
@@ -490,130 +501,130 @@
                                 </a>
                             </button>
                         </div>
-                    <div class="swiper-slide">
-                        <button>
-                            <div class="prise_list_info">
-                                <span class="prise_caption">
-                                    Ремонтные услуги
-                                </span>
-                                <span class="prise_text">
-                                    Замена програмного обеспечения
-                                </span>
-                            </div>
-                            <div class="prise_list_cost">
-                                <span class="prise_caption">
-                                    Цена
-                                </span>
-                                <span class="prise_text">
-                                    1000 ₽
-                                </span>
-                            </div>
-                            <div class="prise_info_term">
-                                <span class="prise_caption">
-                                    Срок
-                                </span>
-                                <span class="prise_text">
-                                    30-120 мин
-                                </span>
-                            </div>
-                            <a>
-                                Заказать >
-                            </a>
-                        </button>
-                    </div>
-                    <div class="swiper-slide">
-                        <button>
-                            <div class="prise_list_info">
-                                <span class="prise_caption">
-                                    Ремонтные услуги
-                                </span>
-                                <span class="prise_text">
-                                    Замена програмного обеспечения
-                                </span>
-                            </div>
-                            <div class="prise_list_cost">
-                                <span class="prise_caption">
-                                    Цена
-                                </span>
-                                <span class="prise_text">
-                                    1000 ₽
-                                </span>
-                            </div>
-                            <div class="prise_info_term">
-                                <span class="prise_caption">
-                                    Срок
-                                </span>
-                                <span class="prise_text">
-                                    30-120 мин
-                                </span>
-                            </div>
-                            <a>
-                                Заказать >
-                            </a>
-                        </button>
-                    </div>
-                    <div class="swiper-slide">
-                        <button>
-                            <div class="prise_list_info">
-                                <span class="prise_caption">
-                                    Ремонтные услуги
-                                </span>
-                                <span class="prise_text">
-                                    Замена програмного обеспечения
-                                </span>
-                            </div>
-                            <div class="prise_list_cost">
-                                <span class="prise_caption">
-                                    Цена
-                                </span>
-                                <span class="prise_text">
-                                    1000 ₽
-                                </span>
-                            </div>
-                            <div class="prise_info_term">
-                                <span class="prise_caption">
-                                    Срок
-                                </span>
-                                <span class="prise_text">
-                                    30-120 мин
-                                </span>
-                            </div>
-                            <a>
-                                Заказать >
-                            </a>
-                        </button>
-                    </div>
-                    <div class="swiper-slide">
-                        <button>
-                            <div class="prise_list_info">
-                                <span class="prise_caption">
-                                    Ремонтные услуги
-                                </span>
-                                <span class="prise_text">
-                                    Замена програмного обеспечения
-                                </span>
-                            </div>
-                            <div class="prise_list_cost">
-                                <span class="prise_caption">
-                                    Цена
-                                </span>
-                                <span class="prise_text">
-                                    1000 ₽
-                                </span>
-                            </div>
-                            <div class="prise_info_term">
-                                <span class="prise_caption">
-                                    Срок
-                                </span>
-                                <span class="prise_text">
-                                    30-120 мин
-                                </span>
-                            </div>
-                            <a>
-                                Заказать >
-                            </a>
-                        </button>
-                    </div>
+                        <div class="swiper-slide">
+                            <button>
+                                <div class="prise_list_info">
+                                    <span class="prise_caption">
+                                        Ремонтные услуги
+                                    </span>
+                                    <span class="prise_text">
+                                        Замена програмного обеспечения
+                                    </span>
+                                </div>
+                                <div class="prise_list_cost">
+                                    <span class="prise_caption">
+                                        Цена
+                                    </span>
+                                    <span class="prise_text">
+                                        1000 ₽
+                                    </span>
+                                </div>
+                                <div class="prise_info_term">
+                                    <span class="prise_caption">
+                                        Срок
+                                    </span>
+                                    <span class="prise_text">
+                                        30-120 мин
+                                    </span>
+                                </div>
+                                <a>
+                                    Заказать >
+                                </a>
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button>
+                                <div class="prise_list_info">
+                                    <span class="prise_caption">
+                                        Ремонтные услуги
+                                    </span>
+                                    <span class="prise_text">
+                                        Замена програмного обеспечения
+                                    </span>
+                                </div>
+                                <div class="prise_list_cost">
+                                    <span class="prise_caption">
+                                        Цена
+                                    </span>
+                                    <span class="prise_text">
+                                        1000 ₽
+                                    </span>
+                                </div>
+                                <div class="prise_info_term">
+                                    <span class="prise_caption">
+                                        Срок
+                                    </span>
+                                    <span class="prise_text">
+                                        30-120 мин
+                                    </span>
+                                </div>
+                                <a>
+                                    Заказать >
+                                </a>
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button>
+                                <div class="prise_list_info">
+                                    <span class="prise_caption">
+                                        Ремонтные услуги
+                                    </span>
+                                    <span class="prise_text">
+                                        Замена програмного обеспечения
+                                    </span>
+                                </div>
+                                <div class="prise_list_cost">
+                                    <span class="prise_caption">
+                                        Цена
+                                    </span>
+                                    <span class="prise_text">
+                                        1000 ₽
+                                    </span>
+                                </div>
+                                <div class="prise_info_term">
+                                    <span class="prise_caption">
+                                        Срок
+                                    </span>
+                                    <span class="prise_text">
+                                        30-120 мин
+                                    </span>
+                                </div>
+                                <a>
+                                    Заказать >
+                                </a>
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button>
+                                <div class="prise_list_info">
+                                    <span class="prise_caption">
+                                        Ремонтные услуги
+                                    </span>
+                                    <span class="prise_text">
+                                        Замена програмного обеспечения
+                                    </span>
+                                </div>
+                                <div class="prise_list_cost">
+                                    <span class="prise_caption">
+                                        Цена
+                                    </span>
+                                    <span class="prise_text">
+                                        1000 ₽
+                                    </span>
+                                </div>
+                                <div class="prise_info_term">
+                                    <span class="prise_caption">
+                                        Срок
+                                    </span>
+                                    <span class="prise_text">
+                                        30-120 мин
+                                    </span>
+                                </div>
+                                <a>
+                                    Заказать >
+                                </a>
+                            </button>
+                        </div>
                     </div>
                     <div class="swiper-pagination prise_pagination"></div>
                 </div>
@@ -685,8 +696,8 @@
         </main>
     
 
-    <script type="module" src="./js/swiper-bundle.min.js.js"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script src="./js/swiper-bundle.min.js.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
 

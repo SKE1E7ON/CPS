@@ -1,6 +1,3 @@
-import '../style.css';
-import '../style/swiper-bundle.main.css';
-
 const navLinks = document.querySelectorAll('.nav__link');
 const btn_close_menu = document.getElementById("close_menu")
 const menu = document.getElementById("menu")
@@ -20,6 +17,8 @@ const call_me = document.getElementById("call_me")
 const me_call = document.getElementById("me_call")
 const call_back = document.getElementById("call_back")
 const back_call = document.getElementById("back_call")
+const back_calla = document.getElementById("back_calla")
+const back_callb = document.getElementById("back_callb")
 const exid = document. getElementById("exid")
 
 navLinks.forEach(link => {
@@ -30,45 +29,69 @@ navLinks.forEach(link => {
   });
 });
 
-exid.addEventListener('click', () => {
+exid.addEventListener('click', (event) => {
+  event.preventDefault();
   call_me.classList.add('off');
   call_me.classList.remove('on');
   blurs.style.display = "none"
 });
 
-me_call.addEventListener('click', () =>{
+me_call.addEventListener('click', (event) =>{
+  event.preventDefault();
   call_me.classList.add('on');
   call_me.classList.remove('off');
   blurs.style.display = "block"
 
 });
-exid.addEventListener('click', () => {
+exid.addEventListener('click', (event) => {
+  event.preventDefault();
   call_back.classList.add('off');
   call_back.classList.remove('on');
   blurs.style.display = "none"
 });
 
-back_call.addEventListener('click', () =>{
+back_call.addEventListener('click', (event) =>{
+  event.preventDefault();
+  call_back.classList.add('on');
+  call_back.classList.remove('off');
+  blurs.style.display = "block"
+
+});
+back_calla.addEventListener('click', (event) =>{
+  event.preventDefault();
+  menu.classList.add('hidden');
+  menu.classList.remove('visible');
+  blurs.style.display = "none"
+  call_back.classList.add('on');
+  call_back.classList.remove('off');
+  blurs.style.display = "block"
+
+});
+back_callb.addEventListener('click', (event) =>{
+  event.preventDefault();
   call_back.classList.add('on');
   call_back.classList.remove('off');
   blurs.style.display = "block"
 
 });
 
-btn_close_menu.addEventListener('click', () => {
+btn_close_menu.addEventListener('click', (event) => {
+  event.preventDefault();
     menu.classList.add('hidden');
     menu.classList.remove('visible');
     blurs.style.display = "none"
 });
 
-btn_show_menu.addEventListener('click', () =>{
+btn_show_menu.addEventListener('click', (event) =>{
+  event.preventDefault();
     menu.classList.add('visible');
     menu.classList.remove('hidden');
     blurs.style.display = "block"
 
 });
 
-show_text.addEventListener('click', ()=>{
+show_text.addEventListener('click', (event)=>{
+  event.preventDefault();
   text.style.height = "80%"
   show_text.classList.remove("on")
   show_text.classList.add("off")
@@ -76,7 +99,8 @@ show_text.addEventListener('click', ()=>{
   
 });
 
-close_text.addEventListener('click', ()=>{
+close_text.addEventListener('click', (event)=>{
+  event.preventDefault();
     text.style.height = "115px"
     close_text.classList.remove("on")
     close_text.classList.add("off")
@@ -85,25 +109,42 @@ close_text.addEventListener('click', ()=>{
 
 
 
-var swiper = new Swiper(".mySwiper", {
-  
-  direction: 'horizontal',
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1.5,
+  spaceBetween: 1,
   loop: false,
-  slidersPerView: 'auto',
-  spaseBetween: 16,
+  centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  breakpionts:{
-    768:{
-      spaseBetween: 0,
-    },
-  }
-
+  breakpoints: {
+      640: {
+          slidesPerView: 2.5, // На маленьких экранах
+      },
+      1024: {
+          slidesPerView: 3.5, // На больших экранах
+      },
+  },
 });
-
-
+const swiper2 = new Swiper('.swiper-2', {
+  slidesPerView: 1.5,
+  spaceBetween: 1,
+  loop: false,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+      640: {
+          slidesPerView: 2.5, // На маленьких экранах
+      },
+      1024: {
+          slidesPerView: 3.5, // На больших экранах
+      },
+  },
+});
 show.addEventListener('click', () => {
   corp_container.style.height = '100%'
   clozd.style.display = "flex"
