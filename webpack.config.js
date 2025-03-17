@@ -1,5 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
@@ -10,27 +13,30 @@ module.exports = {
     target,
     devtool,
     entry: './src/js/index.js',
-    output:{
+    output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        filename: 'index.[contenthash].js'
+        filename: 'index.[contenthash].js',
     },
     plugins: [
-        new HtmlWebpackPlugin(
-            {
-                template: path.resolve('./src/index.html')
-            }),
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'styles.[contenthash].css',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve('./src/index.html'),
+        }),
     ],
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
                 test: /\.html$/,
-                use: ['html-loader'] 
+                use: ['html-loader'],
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-            }
-        ]
-    }
-} 
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
+            },
+        ],
+    },
+};
